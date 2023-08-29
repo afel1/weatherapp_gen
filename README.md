@@ -14,7 +14,7 @@ To start the application, follow these steps:
 
 Clone this repository to your local machine.
 
-   ```console shell
+   ```console 
    git clone https://github.com/afel1/weatherapp_gen.git
    ```
 
@@ -38,9 +38,9 @@ Once the application is up and running, you can access the API at ```http://loca
 
 To create a new sensor in the application, send a POST request with the following JSON object:
 ```console
-   {
-    "name": "name of the sensor",
-    "location": "location of the sensor"
+    {
+        "name": "name of the sensor",
+        "location": "location of the sensor"
     }
 ```
 If the request is successful, you will receive a true boolean indicating that the sensor has been added.
@@ -54,11 +54,11 @@ To retrieve the list of all sensors in the application along with their informat
 
 Example:
 ```console
-   curl http://localhost:8080/getSensorsList
+curl http://localhost:8080/getSensorsList
 ```
 To get specific sensor details, add their IDs as query parameters using the key sensorIds. For example, to retrieve details for sensors with IDs 1001, 1002, and 1003:
 ```console
-   curl http://localhost:8080/getSensorsList?sensorIds=1001,1002,1003
+curl http://localhost:8080/getSensorsList?sensorIds=1001,1002,1003
 
 ```
 This will return the details of the specified sensors.
@@ -67,12 +67,12 @@ This will return the details of the specified sensors.
 To add weather metrics to the application (temperature, humidity, wind speed, precipitation), send a POST request with the following JSON object:
 
 ```console
-   {
-    "temperature": float,
-    "humidity": float,
-    "windSpeed": float,
-    "precipitation": float,
-    "sensorId": long
+    {
+        "temperature": float,
+        "humidity": float,
+        "windSpeed": float,
+        "precipitation": float,
+        "sensorId": long
     }
 
 ```
@@ -80,7 +80,7 @@ If the metrics are added to the specified sensor, the API will return a true boo
 
 Example using curl:
 ```console
-   curl -X POST -H "Content-Type: application/json" -d '{"temperature": 25.5, "humidity": 50.0, "windSpeed": 3.0, "precipitation": 0.0, "sensorId": 1001}' http://localhost:8080/recordMetrics
+curl -X POST -H "Content-Type: application/json" -d '{"temperature": 25.5, "humidity": 50.0, "windSpeed": 3.0, "precipitation": 0.0, "sensorId": 1001}' http://localhost:8080/recordMetrics
 
 ```
 This will add weather metrics to the sensor with ID 1001 and return true if successful.
@@ -97,7 +97,7 @@ To retrieve metrics data and statistics within a specified date range, use this 
 - **startDate and endDate:** A date range for the metrics you want to use in your calculations. The range must be between one day and one month, or an error will be thrown. If no parameters are passed, the app will calculate statistics based on the data of the last month.
 Example:
 ```console
-   curl "http://localhost:8080/getMetricsData?metricsTypes=TEM,HUM&statistic=AVG&sensorIds=1001,1002&startDate=2023-07-05&endDate=2023-07-31"
+curl "http://localhost:8080/getMetricsData?metricsTypes=TEM,HUM&statistic=AVG&sensorIds=1001,1002&startDate=2023-07-05&endDate=2023-07-31"
 ```
 This will retrieve the average temperature and humidity statistics for sensors **1001** and **1002** between **2023-07-05** and **2023-07-31**.
 
