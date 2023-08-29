@@ -20,9 +20,10 @@ Clone this repository to your local machine.
 
 Navigate to the project directory.
 
-    ```console
-    cd weatherapp_gen
-    ```
+```console
+cd weatherapp_gen
+```
+
 Build and run the Docker containers using docker-compose.
 
 ```console
@@ -38,14 +39,14 @@ Once the application is up and running, you can access the API at ```http://loca
 
 To create a new sensor in the application, send a POST request with the following JSON object:
 ```console
-    {
-        "name": "name of the sensor",
-        "location": "location of the sensor"
-    }
+{
+    "name": "name of the sensor",
+    "location": "location of the sensor"
+}
 ```
 If the request is successful, you will receive a true boolean indicating that the sensor has been added.
 ```console
-   curl -X POST -H "Content-Type: application/json" -d '{"name":"Sensor1", "location":"Office"}' http://localhost:8080/createSensor
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Sensor1", "location":"Office"}' http://localhost:8080/createSensor
 ```
 This will create a sensor with the name "Sensor1" and location "Office" in the application.
 
@@ -67,13 +68,13 @@ This will return the details of the specified sensors.
 To add weather metrics to the application (temperature, humidity, wind speed, precipitation), send a POST request with the following JSON object:
 
 ```console
-    {
-        "temperature": float,
-        "humidity": float,
-        "windSpeed": float,
-        "precipitation": float,
-        "sensorId": long
-    }
+{
+    "temperature": float,
+    "humidity": float,
+    "windSpeed": float,
+    "precipitation": float,
+    "sensorId": long
+}
 
 ```
 If the metrics are added to the specified sensor, the API will return a true boolean.
