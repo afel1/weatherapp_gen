@@ -27,7 +27,7 @@ cd weatherapp_gen
 Build and run the Docker containers using docker-compose.
 
 ```console
-docker-compose up --build
+docker compose up -d
 ```
 This command will start both the backend API and the PostgreSQL database.
 
