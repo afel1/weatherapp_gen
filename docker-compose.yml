@@ -1,0 +1,34 @@
+version: '3'
+services:
+  # Spring Boot Application
+  spring-app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: spring-boot-weatherapp
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/weather_db?currentSchema=weather_db
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: weatherappPASSWORD
+      SPRING_JPA_PROPERTIES_HIBERNATE: org.hibernate.dialect.PostgreSQLDialect
+      SPRING_FLYWAY_USER: admin
+      SPRING_FLYWAY_PASSWORD: weatherappPASSWORD
+      SPRING_FLYWAY_SCHEMAS: weather_db
+      SPRING_FLYWAY_URL: jdbc:postgresql://postgres-db:5432/weather_db
+      SPRING_FLYWAY_LOCATIONS: classpath:db/
+
+  # PostgreSQL Database
+  postgres-db:
+    image: postgres:latest
+    container_name: weatherapp_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: weather_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: weatherappPASSWORD
+

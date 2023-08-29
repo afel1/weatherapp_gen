@@ -1,0 +1,11 @@
+version: '3'
+services:
+  postgres-db:
+    image: postgres:latest
+    container_name: weather_app_db
+    environment:
+      POSTGRES_DB: weather_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: weatherappPASSWORD
+    ports:
+      - "5432:5432"
