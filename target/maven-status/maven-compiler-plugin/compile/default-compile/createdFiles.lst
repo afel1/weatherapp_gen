@@ -1,0 +1,14 @@
+com\genesys\weatherapp\entities\Metric.class
+com\genesys\weatherapp\dtos\StatisticMetricDto.class
+com\genesys\weatherapp\WeatherappApplication.class
+com\genesys\weatherapp\entities\Sensor$SensorBuilder.class
+com\genesys\weatherapp\controllers\AppController.class
+com\genesys\weatherapp\dtos\SensorDto.class
+com\genesys\weatherapp\dtos\CreationSensorDto.class
+com\genesys\weatherapp\services\AppService.class
+com\genesys\weatherapp\entities\Sensor.class
+com\genesys\weatherapp\dao\MetricDAO.class
+com\genesys\weatherapp\entities\Metric$MetricBuilder.class
+com\genesys\weatherapp\controllers\AppControllerImpl.class
+com\genesys\weatherapp\dao\SensorDAO.class
+com\genesys\weatherapp\dtos\CreationMetricDto.class

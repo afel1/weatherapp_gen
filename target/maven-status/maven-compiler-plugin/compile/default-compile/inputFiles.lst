@@ -1,0 +1,12 @@
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\controllers\AppControllerImpl.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\dao\MetricDAO.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\dao\SensorDAO.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\entities\Sensor.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\dtos\CreationSensorDto.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\entities\Metric.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\dtos\StatisticMetricDto.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\controllers\AppController.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\dtos\CreationMetricDto.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\dtos\SensorDto.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\WeatherappApplication.java
+C:\Projets\weatherapp\src\main\java\com\genesys\weatherapp\services\AppService.java
